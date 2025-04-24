@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Falling Letters</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      height: 100vh;
+      background: linear-gradient(135deg, #e4e9f7, #f1d9f7);
+      overflow: hidden;
+    }
+
+    #controls {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    #textInput {
+      padding: 15px 25px;
+      font-size: 20px;
+      border: 3px solid #5e1784;
+      border-radius: 40px;
+      width: 500px;
+      outline: none;
+      margin-top: 150px;
+    }
+
+    #clearBtn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      padding: 12px 20px;
+      background: #5e1784;
+      color: white;
+      border: none;
+      font-weight: bold;
+      font-family: monospace;
+      border-radius: 40px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div id="controls">
+    <input id="textInput" type="text" placeholder="Type any letters, words or phrases here" />
+  </div> -->
+  <button id="clearBtn">CLEAR</button>
+  <canvas id="canvas"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
